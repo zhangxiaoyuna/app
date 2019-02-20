@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排序数组</title>
+    <script>
+        let gradearr = [56, 89, 67, 90, 100, 87, 45, 56, 67, 32];
+        //冒泡排序
+        // for (let i = 0; i < gradearr.length; i++) {           //比较几轮
+        //     for (let j = 0; j < gradearr.length - 1 - i; j++) {     //比较几次
+        //         if (gradearr[j]>gradearr[j+1]){
+        //             let temp=gradearr[j];
+        //             gradearr[j]=gradearr[j+1];
+        //             gradearr[j+1]=temp;
+        //         }
+        //     }
+        // }
+        // console.log(gradearr);
+
+        // ES6 解构赋值
+        //let a=1;
+        //let b=2;
+        //[gradeArr[0],gradeArr[1]]=[gradeArr[1],gradeArr[0]];
+
+        //选择排序
+        // for (let i=0;i<gradearr.length;i++){
+        //     let min=i; //min代表的是最小值所在的位置
+        //     for(let j=i+1;j<gradearr.length;j++){
+        //         if (gradearr[min]>gradearr[j]){
+        //             min=j;
+        //         }
+        //     }
+        //     let temp=gradearr[i];
+        //     gradearr[i]=gradearr[min];
+        //     gradearr[min]=temp;
+        //
+        // }
+        // console.log(gradearr);
+
+        //插入排序
+        for (let i=1;i<gradearr.length;i++){
+            let temp=gradearr[i];
+            let j=i-1;
+            while(j>=0&&temp<gradearr[j]){
+                gradearr[j+1]=gradearr[j];
+                j--;
+            }
+            gradearr[j+1]=temp;
+        }
+        console.log(gradearr);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
